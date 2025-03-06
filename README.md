@@ -1,6 +1,6 @@
 # 📌 Description  
-**Flask API server for Machine Learning predictions using Linear Regression**  
-This project implements a simple **Linear Regression** model to predict **bike rentals (Y)** based on environmental conditions: **temperature, humidity, and windspeed (X)**.
+**Flask API Server for Machine Learning Predictions using Random Forest Algorithm**  
+Flask API server for Machine Learning predictions using Random Forest algorithm. This project implements a **Random Forest Classifier** model to predict **wine quality** (Y) based on various chemical properties: **fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, and alcohol** (X).
 
 # 🚀 How to Run  
 1. **View Dataset Information**  
