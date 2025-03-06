@@ -4,15 +4,12 @@ import numpy as np
 import pandas as pd
 
 # Load model
-model = joblib.load("../model/wine_quality_model.pkl")
+model = joblib.load("../model/winequality_prediction.pkl")
 
-# Handler untuk prediksi
+# Prediction Handler
 def predict_handler():
     data = request.json["features"]
-    data = np.array([data])  # Pastikan bentuknya 2D
-    # Konversi ke DataFrame dengan nama kolom yang sama seperti saat training
+    data = np.array([data])  # 2D Array
     df = pd.DataFrame(data, columns=model.feature_names_in_)
     prediction = model.predict(df)
-    prediction_rounded = np.rint(prediction).tolist()  # Membulatkan ke nilai terdekat
-    return jsonify({"Prediksi": prediction.tolist(),
-                    "Prediksi (dibulatkan)":prediction_rounded})
+    return jsonify({"Prediksi": prediction.tolist()})

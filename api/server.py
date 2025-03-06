@@ -1,11 +1,11 @@
 from flask import Flask
 from flask_cors import CORS
-from route import configure_routes  # Import routes
+from route import configure_routes
 
 app = Flask(__name__)
-CORS(app)  # Izinkan akses frontend
+CORS(app)
 
-configure_routes(app)  # Panggil routes
+configure_routes(app)
 
 if __name__ == "__main__":
     print(app.url_map)
